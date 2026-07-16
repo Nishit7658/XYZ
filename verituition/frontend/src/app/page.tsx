@@ -232,20 +232,21 @@ export default function Home() {
                           <div className="absolute inset-0 bg-gradient-to-r from-indigo-500 to-fuchsia-500 rounded-xl blur opacity-20 group-hover:opacity-40 transition-opacity duration-300"></div>
                           <input
                             type="number"
+                            step="any"
                             required
                             disabled={paymentStatus !== 'idle'}
                             value={amount}
                             onChange={(e) => setAmount(e.target.value)}
-                            placeholder="e.g. 1000"
+                            placeholder="e.g. 2.5"
                             className="w-full pl-6 pr-16 py-4 rounded-xl border border-white/10 bg-[#0B0F19]/90 focus:bg-[#0B0F19] focus:ring-1 focus:ring-fuchsia-500 focus:border-fuchsia-500 outline-none transition-all text-xl font-bold text-white placeholder:text-slate-600 disabled:opacity-50 relative z-10 backdrop-blur-md"
                           />
-                          <div className="absolute right-6 top-1/2 -translate-y-1/2 font-black text-slate-500 z-20 pointer-events-none">VERI</div>
+                          <div className="absolute right-6 top-1/2 -translate-y-1/2 font-black text-slate-500 z-20 pointer-events-none">AVAX</div>
                         </div>
                       </div>
                       
                       <div className="bg-fuchsia-950/30 border border-fuchsia-900/50 text-fuchsia-200/80 text-sm p-4 rounded-xl flex gap-3 leading-relaxed">
                         <LockKeyhole className="w-5 h-5 shrink-0 text-fuchsia-400 mt-0.5" />
-                        <p><strong>Privacy Check:</strong> The public block explorer will only see a random string of ciphertext, not your {amount || 'entered'} VERI amount.</p>
+                        <p><strong>Privacy Check:</strong> The public block explorer will only see a random string of ciphertext, not your {amount || 'entered'} AVAX amount.</p>
                       </div>
                       
                       <button
